@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teguebi | Compañero lingüístico</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--terracota:#9a5c43;--terracota-dark:#70402f;--arena:#f4efe7;--crema:#fbf9f5;--verde:#5f7057;--texto:#302c28;--gris:#716b64;--blanco:#fff;--borde:#ded6cb}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--arena);color:var(--texto);line-height:1.5}
+header{background:var(--crema);border-bottom:1px solid var(--borde);padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.7rem;font-weight:700;letter-spacing:1px;color:var(--terracota-dark)}
+.subtitle{font-size:.9rem;color:var(--gris);text-align:right}
+main{max-width:1200px;margin:auto;padding:40px 5%}
+.intro{text-align:center;margin-bottom:35px}.intro h1{font-size:clamp(1.8rem,4vw,2.7rem);color:var(--terracota-dark);margin-bottom:8px}.intro p{max-width:760px;margin:auto;color:var(--gris);font-size:1rem}.intro .english{margin-top:7px;font-size:.92rem;font-style:italic}
+.experience{background:var(--crema);border:1px solid var(--borde);border-radius:24px;padding:30px;display:grid;grid-template-columns:minmax(280px,430px) 1fr;gap:45px;align-items:center;box-shadow:0 8px 30px rgba(60,45,30,.06)}
+.video-area{display:flex;justify-content:center;align-items:center}.video-frame{width:min(100%,390px);aspect-ratio:9/16;background:#201c19;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.16)}.video-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.interaction h2{font-size:1.65rem;color:var(--terracota-dark);margin-bottom:5px}.interaction h3{font-size:1rem;color:var(--gris);font-weight:500;margin-bottom:22px}.context{color:var(--texto);margin-bottom:7px}.context-english{color:var(--gris);font-size:.92rem;margin-bottom:25px;font-style:italic}
+.languages{margin-bottom:28px}.languages-title{font-size:.85rem;font-weight:700;color:var(--gris);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}.language-buttons{display:flex;flex-wrap:wrap;gap:8px}.language-btn{border:1px solid var(--borde);background:var(--blanco);color:var(--texto);padding:10px 16px;border-radius:30px;cursor:pointer;font-size:.95rem;transition:all .2s ease}.language-btn:hover{border-color:var(--terracota)}.language-btn.active{background:var(--terracota);border-color:var(--terracota);color:#fff}
+.question{font-size:1rem;font-weight:700;margin-bottom:14px}.question-english{display:block;font-size:.88rem;color:var(--gris);font-weight:400;margin-top:2px}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.action-btn{background:var(--blanco);border:1px solid var(--borde);border-radius:14px;padding:16px 10px;cursor:pointer;color:var(--texto);font-weight:600;transition:transform .2s ease,border-color .2s ease}.action-btn:hover{transform:translateY(-2px);border-color:var(--terracota)}.action-btn span{display:block;font-size:1.35rem;margin-bottom:5px}.action-btn small{display:block;margin-top:3px;color:var(--gris);font-weight:400;font-size:.78rem}
+.response{margin-top:22px;background:var(--arena);border-left:4px solid var(--verde);padding:16px 18px;border-radius:8px;min-height:105px;color:var(--texto)}.response strong{color:var(--verde)}.response .en{display:block;margin-top:8px;color:var(--gris);font-size:.92rem;font-style:italic}
+.prototype-note{margin-top:30px;padding:17px 20px;border:1px solid var(--borde);border-radius:14px;background:var(--blanco)}.prototype-note strong{color:var(--terracota-dark)}.prototype-note p{color:var(--gris);font-size:.9rem;margin-top:4px}.prototype-note .en{font-style:italic}
+footer{text-align:center;padding:30px 20px;color:var(--gris);font-size:.8rem}
+@media(max-width:800px){header{padding:15px 5%}.subtitle{font-size:.75rem}main{padding:25px 4%}.intro{margin-bottom:25px}.experience{grid-template-columns:1fr;gap:25px;padding:20px;border-radius:20px}.video-frame{width:min(82vw,350px)}.interaction h2{font-size:1.45rem}.actions{grid-template-columns:1fr}.action-btn{display:flex;align-items:center;gap:12px;text-align:left}.action-btn span{margin-bottom:0}}
+@media(max-width:480px){header{flex-direction:column;align-items:flex-start;gap:3px}.subtitle{text-align:left}.video-frame{width:88vw}.language-buttons{display:grid;grid-template-columns:1fr}.language-btn{width:100%}.intro h1{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<header><div class="logo">TEGUEBI</div><div class="subtitle">Compañero lingüístico<br>Community-centered AI prototype</div></header>
+<main>
+<section class="intro">
+<h1>Aprendamos juntos</h1>
+<p>Teguebi es un prototipo de compañero lingüístico diseñado para explorar nuevas formas de aprender, practicar y compartir conocimientos en Matlatzinca.</p>
+<p class="english">Teguebi is a linguistic companion prototype designed to explore new ways of learning, practicing, and sharing knowledge in Matlatzinca.</p>
+</section>
+<section class="experience">
+<div class="video-area"><div class="video-frame">
+<!-- Coloca los tres videos dentro de una carpeta "assets": teguebi-matlatzinca.mp4, teguebi-espanol.mp4, teguebi-english.mp4. El audio ya está integrado en cada video. -->
+<video id="teguebiVideo" controls playsinline preload="metadata"><source id="videoSource" src="assets/teguebi-matlatzinca.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video>
+</div></div>
+<div class="interaction">
+<div class="languages"><div class="languages-title">Lengua / Language</div><div class="language-buttons">
+<button class="language-btn active" data-video="assets/teguebi-matlatzinca.mp4">Matlatzinca</button>
+<button class="language-btn" data-video="assets/teguebi-espanol.mp4">Español</button>
+<button class="language-btn" data-video="assets/teguebi-english.mp4">English</button>
+</div></div>
+<h2>Preparar la tierra antes de sembrar</h2><h3>Preparing the land before planting</h3>
+<p class="context">Explora el conocimiento lingüístico y cultural relacionado con una práctica comunitaria.</p>
+<p class="context-english">Explore the linguistic and cultural knowledge related to a community practice.</p>
+<p class="question">¿Qué quieres hacer?<span class="question-english">What would you like to do?</span></p>
+<div class="actions">
+<button class="action-btn" onclick="showResponse('escuchar')"><span>🔊</span>Escuchar<small>Listen</small></button>
+<button class="action-btn" onclick="showResponse('practicar')"><span>🗣️</span>Practicar<small>Practice</small></button>
+<button class="action-btn" onclick="showResponse('contexto')"><span>🌱</span>Contexto<small>Context</small></button>
+</div>
+<div id="response" class="response">Selecciona una opción para explorar.<span class="en">Select an option to explore.</span></div>
+<div class="prototype-note"><strong>Sobre Teguebi / About Teguebi</strong>
+<p>Esta versión es un prototipo centrado en la comunidad. Explora la dimensión lingüística, pedagógica y visual del agente; el desarrollo de capacidades conversacionales de IA corresponde a una siguiente fase.</p>
+<p class="en">This version is a community-centered prototype. It explores the linguistic, pedagogical, and visual dimensions of the agent; conversational AI development belongs to a subsequent phase.</p>
+</div>
+</div></section>
+</main>
+<footer>Teguebi · Prototipo V0.1 · Diseño centrado en la comunidad</footer>
+<script>
+const languageButtons=document.querySelectorAll('.language-btn');const video=document.getElementById('teguebiVideo');const videoSource=document.getElementById('videoSource');
+languageButtons.forEach(button=>{button.addEventListener('click',()=>{languageButtons.forEach(btn=>btn.classList.remove('active'));button.classList.add('active');video.pause();videoSource.src=button.getAttribute('data-video');video.load();});});
+function showResponse(type){const response=document.getElementById('response');if(type==='escuchar'){response.innerHTML="<strong>Escuchar:</strong> Observa y escucha nuevamente el fragmento en la lengua seleccionada.<span class='en'><strong>Listen:</strong> Watch and listen to the fragment again in the selected language.</span>";}if(type==='practicar'){response.innerHTML="<strong>Practicar:</strong> Repite la expresión y compara tu pronunciación con el modelo presentado por Teguebi.<span class='en'><strong>Practice:</strong> Repeat the expression and compare your pronunciation with the model presented by Teguebi.</span>";}if(type==='contexto'){response.innerHTML="<strong>Contexto:</strong> Este fragmento recupera conocimientos relacionados con la preparación de la tierra antes de la siembra.<span class='en'><strong>Context:</strong> This fragment presents knowledge related to preparing the land before planting.</span>";}}
+</script>
+</body>
+</html>
